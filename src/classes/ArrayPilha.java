@@ -1,5 +1,6 @@
 package classes;
-import interfaces;
+import exceptions.EmptyStackException;
+import interfaces.Pilha;
 
 public class ArrayPilha<E> implements Pilha<E>{
 
@@ -16,7 +17,7 @@ public class ArrayPilha<E> implements Pilha<E>{
     public ArrayPilha(int capacity){
         this.capacity = capacity;
 
-        pilha = new Object[this.capacity];
+        pilha = (E[]) new Object[this.capacity];
     }
 
     public int size(){
@@ -28,14 +29,15 @@ public class ArrayPilha<E> implements Pilha<E>{
     }
 
     public void push(E element){
-        S[++top] = element;
+        pilha[++top] = element;
     }
 
     public E top(){
-        return S[top];
+        return pilha[top];
     }
 
-    public E pop(){
+    public E pop() throws EmptyStackException{  	
+    	
         if(isEmpty()){
             throw new EmptyStackException("Não é possível remover elementos de uma pilha vazia.");
         }
@@ -43,7 +45,7 @@ public class ArrayPilha<E> implements Pilha<E>{
         E element;
 
         element = top();
-        S[--top] = null;
+        pilha[top--] = null;
         return element;
     }
 
@@ -51,11 +53,12 @@ public class ArrayPilha<E> implements Pilha<E>{
         String s;
         s= "[";
         if(size() > 0){
-            s += S[0];
+            s += pilha[0];
         }
-        else if (size() > 1){
-            for (int i = 0; i < size(); i++) {
-                s += "," + S[i];
+        
+        if (size() > 1){
+            for (int i = 1; i <= size() - 1; i++) {
+                s += "," + pilha[i];
             }
         }
         return s + "]";
