@@ -39,7 +39,7 @@ public class ArrayPilha<E> implements Pilha<E>{
     public E pop() throws EmptyStackException{  	
     	
         if(isEmpty()){
-            throw new EmptyStackException("Não é possível remover elementos de uma pilha vazia.");
+            throw new EmptyStackException("A LISTA ESTÁ VAZIA! ESTA OPERAÇÃO NÃO PODE SER EXECUTADA");
         }
 
         E element;
