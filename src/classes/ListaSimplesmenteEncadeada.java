@@ -4,6 +4,7 @@ package classes;
 public class ListaSimplesmenteEncadeada<E> {
     // nodo cabeça da lista
     protected Node head;
+    protected Node tail;
     protected long size;
 
     public ListaSimplesmenteEncadeada(){
@@ -15,11 +16,31 @@ public class ListaSimplesmenteEncadeada<E> {
      * Add a new element in the top of the list, deallocating the items
      * @param Element to be added
      */
-    public void addNewNode( E elemento){
+    public void addNewNode(E elemento){
         Node n  = new Node();
         n.setElement(elemento);
         n.setNext(this.head);
+        
         this.head = n;
+        
+        if (size == 0) {
+        	this.tail = this.head;			
+		}
+        
+        this.size++;
+    }
+    
+    public void addNewNodeOnTail(E elemento){
+        Node n = new Node();        
+        
+        n.setElement(elemento);
+        n.setNext(null);
+        
+        this.tail.setNext(n);
+        
+        this.tail = n;
+        
+        
         this.size++;
     }
 

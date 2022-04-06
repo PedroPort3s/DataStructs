@@ -26,7 +26,7 @@ public class Node<E> {
         element = newElem;
     }
     public void setNext(Node<E> newNext) {
-        next = newNext;
+        next = newNext;        
     }
 
     @Override

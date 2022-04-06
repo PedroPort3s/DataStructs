@@ -10,17 +10,33 @@ public class TesteListaSimplesmenteEncadeada {
 	        l.addNewNode("Quarto item ");
 	        l.addNewNode("Quinto item ");
 	        l.addNewNode("Sexto item ");
-	        l.addNewNode("Sétimo item ");
+	        l.addNewNode("Sï¿½timo item ");
 
 
-	        System.out.println("Lista após as inserções" );
+	        System.out.println("Lista apï¿½s as inserï¿½ï¿½es" );
+	        System.out.println("List: "+ l);
+
+	    }
+	 
+	 private void testarAdicionarNodeCauda(ListaSimplesmenteEncadeada l){
+	        l.addNewNode("primeiro item ");
+	        l.addNewNode("Segundo item ");
+	        l.addNewNode("Terceiro item ");
+	        
+	        l.addNewNodeOnTail("primeiro item na cauda");
+	        l.addNewNodeOnTail("segundo item na cauda");
+	        
+	        l.addNewNode("Quarto item ");
+
+
+	        System.out.println("Lista apï¿½s as inserï¿½ï¿½es" );
 	        System.out.println("List: "+ l);
 
 	    }
 
 	    private void testarRemover1Elemento(ListaSimplesmenteEncadeada  l){
 	        System.out.println("+--------------------------------------+");
-	        System.out.println("Removendo um ítem da lista" );
+	        System.out.println("Removendo um ï¿½tem da lista" );
 	        l.removeNode();
 	        System.out.println("List: "+ l);
 	    }
@@ -35,10 +51,14 @@ public class TesteListaSimplesmenteEncadeada {
 
 	    public void execute(){
 	        ListaSimplesmenteEncadeada l = new ListaSimplesmenteEncadeada();
+	        
 	        testarAdicionarNode(l);
 
 	        testarRemover1Elemento(l);
 
 	        testarRemoverTodosElementos(l);
+	        
+	        this.testarAdicionarNodeCauda(l);
+	        this.testarRemoverTodosElementos(l);
 	    }
 }
