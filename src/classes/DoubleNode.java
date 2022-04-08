@@ -9,10 +9,19 @@ public class DoubleNode<E> {
 	    next = n;
 	    prev = p;
 	  }
-	  public void setElement(E newElem) { element = newElem; }
+	  
+	  public void setElement(E newElem){		  
+		  element = newElem;		  
+	  }
+	  
 	  public void setNext(DoubleNode<E> newNext) { next = newNext; }
 	  public void setPrev(DoubleNode<E> newPrev) { prev = newPrev; }
 	  public E getElement() { return element; }
 	  public DoubleNode<E> getNext() { return next; }
 	  public DoubleNode<E> getPrev() { return prev; }
+	  
+	  @Override
+	  public String toString() {
+		  return element.toString();
+	  }
 }

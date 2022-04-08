@@ -5,9 +5,9 @@ public class EntryPoint {
 	public static void main(String[] args) {
 		//TesteArrayPilha();
 		
-		TesteListaSimplesmenteEncadeada();
+		//TesteListaSimplesmenteEncadeada();
 		
-		//TesteListaDuplamenteEncadeada();
+		TesteListaDuplamenteEncadeada();
 	}
 	
 	private static void TesteArrayPilha() {

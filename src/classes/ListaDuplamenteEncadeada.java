@@ -119,20 +119,26 @@ public class ListaDuplamenteEncadeada {
 	    v.setNext(null);
 	    size--;
 	  }
+	  
+	  public void clear() {
+		  while(this.size() > 0) {
+			  this.remove(this.getLast());
+		  }
+	  }
 
 
 	  @Override
 	  public String toString() {
 	     String r = "";
 	     DoubleNode n = this.getFirst();
-	     String s = (String)n.getElement();
+	     String s = n.getElement().toString();
 	     r = s + "\n";
 
 
 	     while (n != this.trailer) {
 	       n = n.getNext();
 	       if ( n.getElement() != null) {
-	         r = r + (String) n.getElement();
+	         r = r + n.getElement().toString();
 	         r += "\n";
 	       }
 	    }
