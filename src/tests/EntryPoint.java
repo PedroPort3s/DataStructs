@@ -7,13 +7,21 @@ public class EntryPoint {
 		
 		//TesteListaSimplesmenteEncadeada();
 		
-		TesteListaDuplamenteEncadeada();
+		//TesteListaDuplamenteEncadeada();
+		
+		 TesteArrayFila();
 	}
 	
 	private static void TesteArrayPilha() {
 		TesteArrayPilha testePilha = new TesteArrayPilha();
 		
 		testePilha.execute();	
+	}
+	
+	private static void TesteArrayFila() {
+		TesteArrayFila testeFila = new TesteArrayFila();
+		
+		testeFila.execute();
 	}
 	
 	private static void TesteListaSimplesmenteEncadeada() {
