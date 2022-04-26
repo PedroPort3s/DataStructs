@@ -1,10 +1,14 @@
 package tests;
 
 import classes.ArrayFila;
+import classes.NodeFila;
 
 public class TesteArrayFila {
 	public void execute(){
-        ArrayFila<String> q = new ArrayFila<String>(5);
+        //ArrayFila<String> q = new ArrayFila<String>(5);
+        
+        NodeFila<String> q = new NodeFila<String>();
+        
         System.out.println(q.toString());
 
         q.enqueue("Elemento 1");
@@ -17,12 +21,18 @@ public class TesteArrayFila {
         System.out.println(q.toString());
         q.enqueue("Elemento 5");
         System.out.println(q.toString());
-        q.dequeue();
-        System.out.println(q.toString());
-        q.dequeue();
-        System.out.println(q.toString());
-        q.dequeue();
-        System.out.println(q.toString());
+        
+        try {
+			q.dequeue();		
+	        System.out.println(q.toString());
+	        q.dequeue();
+	        System.out.println(q.toString());
+	        q.dequeue();
+	        System.out.println(q.toString());
+        } catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
 }
