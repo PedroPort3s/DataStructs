@@ -1,5 +1,8 @@
 package tests;
 
+import java.time.Duration;
+import java.time.Instant;
+
 public class EntryPoint {
 
 	public static void main(String[] args) {
@@ -9,7 +12,15 @@ public class EntryPoint {
 		
 		//TesteListaDuplamenteEncadeada();
 		
-		 TesteArrayFila();
+		 //TesteArrayFila();
+		
+		TesteSearch();
+	}
+	
+	private static void TesteSearch() {
+		TesteSearch testeBusca = new TesteSearch();		
+		
+		testeBusca.execute();			
 	}
 	
 	private static void TesteArrayPilha() {
