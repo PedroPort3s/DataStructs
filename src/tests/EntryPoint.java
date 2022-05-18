@@ -14,13 +14,21 @@ public class EntryPoint {
 		
 		 //TesteArrayFila();
 		
-		TesteSearch();
+		//TesteSearch();
+		
+		TesteSort();
 	}
 	
 	private static void TesteSearch() {
 		TesteSearch testeBusca = new TesteSearch();		
 		
 		testeBusca.execute();			
+	}
+	
+	private static void TesteSort() {
+		TesteSort testeSort = new TesteSort();
+		
+		testeSort.execute();
 	}
 	
 	private static void TesteArrayPilha() {

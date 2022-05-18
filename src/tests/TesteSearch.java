@@ -111,13 +111,13 @@ public class TesteSearch {
 		int m = 0;
 		
 		while (p <= u) {
-			m = (p + u) / 2;
+			m = (p + u) / 2; //divide o pedaço de vetor ao meio
 			
-			if (c == v[m]) {
+			if (c == v[m]) { // chave igual a posição central do "subvetor"
 				return 1;
 			}
 			else {				
-				if (c < v[m]) {
+				if (c < v[m]) { // se for menor está abaixo da metade, maior acima
 					u = m-1;
 				} 
 				else {
