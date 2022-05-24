@@ -22,7 +22,7 @@ public class Sort {
 	private int seleciona(int v[], int n) {
 		int i = 0;
 		
-		for (int j = 1; j < v.length; j++) {
+		for (int j = 1; j < n; j++) {
 			if (v[i] < v[j]) {
 				i = j;
 			}
@@ -34,9 +34,9 @@ public class Sort {
 	public void selecionaSort(int v[]) {
 		int n = v.length;
 		
-		int selecionado = 0;
+		int selecionado;
 		int i,j;
-		int temp = 0;
+		int temp;
 		
 		while (n > 1) {
 			i = seleciona(v,n);

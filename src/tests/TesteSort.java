@@ -34,7 +34,7 @@ public class TesteSort {
 	}
 	
 	public void TesteSelecionaSort() {
-		int[] vet = {46,54,88,5,3,8,6,74,32,14,100,-85};
+		int[] vet = {38,54,23,5,3,8,6,74,32,14,100,-85, -21};
 		
 		System.out.println(Arrays.toString(vet));
 		
